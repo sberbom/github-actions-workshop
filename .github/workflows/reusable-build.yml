@@ -26,6 +26,10 @@ jobs:
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
+        id: build-push
         with:
           push: ${{ inputs.push }}
           tags: ghcr.io/${{ github.repository }}:latest
+    outputs:
+      image_name: fromJson(jobs.build.outputs.metadata)['image.name']
+      digest: jobs.build.outputs.digest

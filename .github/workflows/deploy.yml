@@ -1,7 +1,23 @@
 name: Deploy this shit
 
+#on:
+#  workflow_dispatch:
+#    inputs:
+#      environment:
+#        description: "Environment to deploy to"
+#        required: true
+#        type: environment
+#      imageName:
+#        description: "Image name"
+#        required: true
+#        type: string
+#      digest:
+#        description: "Digest of the image to deploy"
+#        required: true
+#        type: string
+
 on:
-  workflow_dispatch:
+  workflow_call:
     inputs:
       environment:
         description: "Environment to deploy to"
@@ -15,7 +31,6 @@ on:
         description: "Digest of the image to deploy"
         required: true
         type: string
-
 
 jobs:
   deploy:
