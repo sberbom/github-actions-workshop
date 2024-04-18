@@ -23,4 +23,4 @@ jobs:
     runs-on: 'ubuntu-latest'
     steps:
       - run : echo "Deploying ${{ inputs.imageName }} with digest ${{ inputs.digest }} to ${{ inputs.environment }}"
-      - run : echo ${{ vars.WORKSHOP_ENV_VARIABLE }}
+      - run : echo "${{ vars.WORKSHOP_ENV_VARIABLE }}"
