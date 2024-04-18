@@ -4,7 +4,6 @@ on:
       push:
         description: "Push event"
         required: true
-        default: "true"
         type: boolean
 
 
