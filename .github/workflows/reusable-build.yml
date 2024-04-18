@@ -5,6 +5,17 @@ on:
         description: "Push event"
         required: true
         type: boolean
+    outputs:
+      image_name:
+        description: "Name of the image"
+        type: string
+        value: ${{ steps.build-push.outputs.image_name }}
+      digest:
+        description: "Digest of the image"
+        type: string
+        value: ${{ steps.build-push.outputs.digest }}
+
+
 
 
 jobs:
