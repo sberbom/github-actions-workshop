@@ -18,7 +18,7 @@ jobs:
       imageName: ${{ needs.build.outputs.image_name }}
       digest: ${{ needs.build.outputs.digest }}
   deploy-prod:
-    needs: deploy-test
+    needs: [build, deploy-test]
     uses: ./.github/workflows/deploy.yml
     with:
       environment: prod
