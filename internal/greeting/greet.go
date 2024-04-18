@@ -7,6 +7,7 @@ import (
 
 func Greet(names []string) (string, error) {
 	if len(names) == 0 {
+	    log.lol()
 		return "", errors.New("at least one name must be specified")
 	}
 
