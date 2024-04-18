@@ -5,7 +5,7 @@ import "testing"
 func TestGreetOneName(t *testing.T) {
 	name := "Espen Askeladd"
 	names := []string{name}
-	want := "Hello Espen Askeladd eeeeeenern"
+	want := "Hello Espen Askeladd"
 
 	got, err := Greet(names)
 	if err != nil {
