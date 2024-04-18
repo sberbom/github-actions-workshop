@@ -15,7 +15,7 @@ name: Deploy this shit
 #        description: "Digest of the image to deploy"
 #        required: true
 #        type: string
-#Feet kommentar
+#Feet kommentarerer
 
 on:
   workflow_call:
