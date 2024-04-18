@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 )
-
+// Nice feature comment
 func Greet(names []string) (string, error) {
 	if len(names) == 0 {
 		return "", errors.New("at least one name must be specified")
